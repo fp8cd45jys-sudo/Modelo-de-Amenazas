@@ -31,6 +31,11 @@
             "attrs": {
               "text": {
                 "text": "Cliente"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -128,6 +133,13 @@
               "hasOpenThreats": false,
               "threats": [],
               "providesAuthentication": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -470,7 +482,7 @@
           },
           {
             "position": {
-              "x": 320,
+              "x": 430,
               "y": 280
             },
             "size": {
@@ -479,7 +491,12 @@
             },
             "attrs": {
               "text": {
-                "text": "Recepción multicanal"
+                "text": "Recepción \nmulticanal"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -570,7 +587,7 @@
             "id": "adc53811-2418-40db-a275-1891b1aa4bc3",
             "data": {
               "type": "tm.Process",
-              "name": "Recepción multicanal",
+              "name": "Recepción \nmulticanal",
               "description": "Recepción de requerimientos por llamada telefónica, correo electrónico o plataforma de solicitudes.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -584,7 +601,7 @@
           },
           {
             "position": {
-              "x": 560,
+              "x": 700,
               "y": 280
             },
             "size": {
@@ -958,7 +975,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "1. Solicitud de requerimiento",
+              "name": "1. Solicitud \nde requerimiento",
               "description": "El cliente solicita un requerimiento por teléfono, correo o plataforma.",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -972,14 +989,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "1. Solicitud de requerimiento"
-                  }
-                },
-                "position": 0.5
-              }
+              "1. Solicitud \nde requerimiento"
             ],
             "id": "a4378982-b7c9-418e-8ff6-0541172bb917",
             "source": {
@@ -1073,7 +1083,9 @@
               "isPublicNetwork": true,
               "protocol": "HTTPS",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "74d084cd-23ce-44c1-9c79-f0e8f67a9c63"
+              ]
             },
             "labels": [
               {
@@ -1139,7 +1151,12 @@
             "target": {
               "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 920,
+                "y": 290
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1408,6 +1425,10 @@
             },
             "vertices": [
               {
+                "x": 530,
+                "y": 440
+              },
+              {
                 "x": 480,
                 "y": 460
               },
@@ -1455,14 +1476,23 @@
             ],
             "id": "e3beb058-6991-489f-b88b-fc7021a8a77a",
             "source": {
-              "x": 270,
-              "y": 170
+              "x": 350,
+              "y": 90
             },
             "target": {
-              "x": 270,
-              "y": 530
+              "x": 510,
+              "y": 580
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 270,
+                "y": 140
+              },
+              {
+                "x": 270,
+                "y": 510
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -1487,22 +1517,35 @@
               "description": "Tercero con acceso a datos de todos los clientes.",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
+              "crossingFlows": [
+                "a834346a-75b8-4980-8acd-782b810a0f06"
+              ],
+              "containedElements": [
+                "7b90a31f-dc6b-4715-95ee-db5b345e5e40"
+              ]
             },
             "labels": [
               "Frontera Tercero N1 (Sonda)"
             ],
             "id": "74d084cd-23ce-44c1-9c79-f0e8f67a9c63",
             "source": {
-              "x": 460,
-              "y": 170
+              "x": 380,
+              "y": -10
             },
             "target": {
-              "x": 780,
-              "y": 170
+              "x": 770,
+              "y": -40
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 430,
+                "y": 170
+              },
+              {
+                "x": 740,
+                "y": 170
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -1623,6 +1666,11 @@
             ],
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
