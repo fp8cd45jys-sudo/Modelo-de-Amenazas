@@ -1,11 +1,11 @@
 {
   "version": "2.6.2",
-  "release_version": "",
+  "release_version": "1.0",
   "released_at": "2026-09-29",
   "summary": {
     "title": "VIVARO TELECOM / Firewall Administrado",
     "owner": "Alberto Jorge Gonzalez Reyes",
-    "description": "Servicio de Firewall Administrado provisto por VIVARO TELECOM a clientes empresariales. Incluye la administración remota de los firewalls perimetrales ubicados en las instalaciones del cliente,la gestión de cambios de reglas y políticas a solicitud del cliente a través de la mesa de servicio, el monitoreo continuo, la recolección de logs hacia la plataforma de correlación (SIEM), la gestión de respaldos de configuración y la actualización de firmware. Queda fuera del alcance la infraestructura interna del cliente detrás del firewall y los enlaces del proveedor de Internet.",
+    "description": "Servicio de Firewall Administrado provisto por VIVARO TELECOM a clientes empresariales. Incluye la administración remota de los firewalls perimetrales ubicados en las instalaciones del cliente, la gestión de cambios de reglas y políticas a solicitud del cliente a través de la mesa de servicio, el monitoreo continuo, la recolección de logs hacia la plataforma de correlación (SIEM), la gestión de respaldos de configuración y la actualización de firmware. Queda fuera del alcance la infraestructura interna del cliente detrás del firewall y los enlaces del proveedor de Internet.",
     "id": 0
   },
   "detail": {
@@ -13,13 +13,924 @@
     "diagrams": [
       {
         "id": 0,
-        "title": "DFD Nivel 0 – Firewall Administrado",
+        "title": "DFD 1 – Proceso de Requerimientos (PRO-COP-OPE 6.2.2)",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.6.2",
-        "cells": [],
-        "description": "Vista general de actores, flujos de administración, monitoreo y fronteras de confianza"
+        "cells": [
+          {
+            "position": {
+              "x": 50,
+              "y": 300
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Cliente"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Cliente",
+              "description": "Usuario del cliente con póliza activa de EDR o Firewall Administrado que genera requerimientos por teléfono, correo o plataforma.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 530,
+              "y": 60
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Mesa de Servicio N1 (Sonda)"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "7b90a31f-dc6b-4715-95ee-db5b345e5e40",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Mesa de Servicio N1 (Sonda)",
+              "description": "Proveedor tercerizado que valida cliente y alcance, clasifica, da seguimiento, documenta y cierra requerimientos (6.2.2.2, 6.2.2.3, 6.2.2.6, 6.2.2.7).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 840,
+              "y": 140
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Resolutor N2 Externo (Quanti / Hillpint)"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Resolutor N2 Externo (Quanti / Hillpint)",
+              "description": "Proveedores externos que ejecutan la resolución técnica con acceso administrativo a la infraestructura del cliente (6.2.2.5).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 840,
+              "y": 420
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Resolutor N2 Interno (Vivaro Operaciones)"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "e3a56f7f-b903-4324-80a4-88e04ad56463",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Resolutor N2 Interno (Vivaro Operaciones)",
+              "description": "Equipo interno de Vivaro que ejecuta la resolución técnica de los requerimientos asignados (6.2.2.5).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 320,
+              "y": 280
+            },
+            "size": {
+              "width": 120,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Recepción multicanal"
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "adc53811-2418-40db-a275-1891b1aa4bc3",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Process",
+              "name": "Recepción multicanal",
+              "description": "Recepción de requerimientos por llamada telefónica, correo electrónico o plataforma de solicitudes.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "Bajo"
+            }
+          },
+          {
+            "position": {
+              "x": 560,
+              "y": 280
+            },
+            "size": {
+              "width": 120,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Sistema de Tickets"
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "20067b05-e36a-47ac-89fe-ad837f55427c",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Process",
+              "name": "Sistema de Tickets",
+              "description": "Registro de folios, validación, clasificación, asignación, seguimiento y cierre de requerimientos (6.2.2.1 a 6.2.2.7). Requiere inicio de sesión de usuarios de Mesa de Ayuda, Sonda y resolutores N2.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "Medio"
+            }
+          },
+          {
+            "position": {
+              "x": 1240,
+              "y": 280
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Firewall / EDR del cliente"
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "6f12d61d-bcf0-4a18-89c7-5905700a44e5",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Process",
+              "name": "Firewall / EDR del cliente",
+              "description": "Infraestructura de seguridad del cliente donde se aplica la resolución técnica (cambios de reglas, políticas y exclusiones).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "Alto"
+            }
+          },
+          {
+            "position": {
+              "x": 520,
+              "y": 520
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "BD de Tickets y Registro de Solución"
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "9e98761c-4348-49b1-87cf-75bf83e4ba7f",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Store",
+              "name": "BD de Tickets y Registro de Solución",
+              "description": "Repositorio de requerimientos, datos de contacto de clientes, clasificación, soluciones aplicadas y notificaciones de cierre.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isALog": true,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 19,
+            "connector": "smooth",
+            "id": "a4378982-b7c9-418e-8ff6-0541172bb917",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "1. Solicitud de requerimiento"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe"
+            },
+            "target": {
+              "cell": "adc53811-2418-40db-a275-1891b1aa4bc3"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Solicitud de requerimiento",
+              "description": "El cliente solicita un requerimiento por teléfono, correo o plataforma.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "Teléfono / Correo / Portal",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 20,
+            "connector": "smooth",
+            "id": "f39323c2-2fda-4d7d-9abb-ec1695cbb1d5",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "2. Registro de folio"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "adc53811-2418-40db-a275-1891b1aa4bc3"
+            },
+            "target": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "2. Registro de folio",
+              "description": "La solicitud se registra y se genera folio de seguimiento (6.2.2.1).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "isBidirectional": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 21,
+            "connector": "smooth",
+            "id": "a834346a-75b8-4980-8acd-782b810a0f06",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "3. Validación, clasificación y cierre"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "7b90a31f-dc6b-4715-95ee-db5b345e5e40"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "3. Validación, clasificación y cierre",
+              "description": "Sonda valida póliza, clasifica, documenta y cierra (6.2.2.2, 6.2.2.3, 6.2.2.6, 6.2.2.7).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "isBidirectional": true,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "id": "c376fdc3-5147-4054-bd97-3a158d658951",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "4. Asignación y reporte de solución (N2 externo)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "4. Asignación y reporte de solución (N2 externo)",
+              "description": "Asignación al proveedor externo y reporte de la solución aplicada (6.2.2.4, 6.2.2.5). Canal según proveedor.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "Correo / Portal",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "isBidirectional": true,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 23,
+            "connector": "smooth",
+            "id": "7771a854-1600-4ef9-934b-5da78bc3c0bf",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "5. Asignación y reporte de solución (N2 interno)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "5. Asignación y reporte de solución (N2 interno)",
+              "description": "Asignación al equipo interno y reporte de la solución aplicada (6.2.2.4, 6.2.2.5).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "isBidirectional": true,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 24,
+            "connector": "smooth",
+            "id": "cf0df4a4-9a9d-4690-a469-6b0c58bade76",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "6. Acceso administrativo remoto (externo)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
+            },
+            "target": {
+              "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "6. Acceso administrativo remoto (externo)",
+              "description": "El proveedor externo aplica cambios en el firewall/EDR del cliente.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS / SSH / VPN",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 25,
+            "connector": "smooth",
+            "id": "b3973750-d02f-49d3-9250-caa70796e11b",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "7. Acceso administrativo remoto (interno)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
+            },
+            "target": {
+              "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "7. Acceso administrativo remoto (interno)",
+              "description": "Vivaro Operaciones aplica cambios en el firewall/EDR del cliente.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS / SSH / VPN",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 26,
+            "connector": "smooth",
+            "id": "42802b89-9977-4f9f-9ac4-8f82325113b4",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "8. Lectura/escritura de tickets"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "9e98761c-4348-49b1-87cf-75bf83e4ba7f"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "8. Lectura/escritura de tickets",
+              "description": "El sistema de tickets almacena y consulta requerimientos y soluciones.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "SQL / interno",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "isBidirectional": true,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 27,
+            "connector": "smooth",
+            "id": "0c2e82d8-7a9b-45b6-b6ac-01bc6578c375",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "9. Notificación de cierre"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe"
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 460
+              },
+              {
+                "x": 140,
+                "y": 460
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "9. Notificación de cierre",
+              "description": "Se notifica al cliente el cierre del requerimiento (6.2.2.7).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "Correo (SMTP)",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 38,
+            "connector": "smooth",
+            "id": "e3beb058-6991-489f-b88b-fc7021a8a77a",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Cliente – Vivaro"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 270,
+              "y": 170
+            },
+            "target": {
+              "x": 270,
+              "y": 530
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Cliente – Vivaro",
+              "description": "La identidad de quien solicita no está garantizada.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 39,
+            "connector": "smooth",
+            "id": "74d084cd-23ce-44c1-9c79-f0e8f67a9c63",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Tercero N1 (Sonda)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 460,
+              "y": 210
+            },
+            "target": {
+              "x": 780,
+              "y": 210
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Tercero N1 (Sonda)",
+              "description": "Tercero con acceso a datos de todos los clientes.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 40,
+            "connector": "smooth",
+            "id": "80315ee5-af8f-4201-a1fd-7ddbbeb26615",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Tercero N2"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 790,
+              "y": 100
+            },
+            "target": {
+              "x": 1090,
+              "y": 100
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 300
+              },
+              {
+                "x": 1090,
+                "y": 300
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Tercero N2",
+              "description": "Tercero con acceso administrativo a la infraestructura de clientes.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 41,
+            "connector": "smooth",
+            "id": "3378ab7e-eb26-4dbe-b4ed-63392415d749",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Infraestructura del cliente"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 1170,
+              "y": 120
+            },
+            "target": {
+              "x": 1170,
+              "y": 600
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Infraestructura del cliente",
+              "description": "Activo final que se busca proteger.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          }
+        ],
+        "description": "Recepción, validación, asignación, resolución y cierre de requerimientos de clientes de EDR y Firewall Administrado, con terceros N1 y N2 y fronteras de confianza."
       }
     ],
     "diagramTop": 1,
