@@ -243,8 +243,8 @@
           },
           {
             "position": {
-              "x": 840,
-              "y": 140
+              "x": 860,
+              "y": 40
             },
             "size": {
               "width": 180,
@@ -354,8 +354,8 @@
           },
           {
             "position": {
-              "x": 840,
-              "y": 420
+              "x": 880,
+              "y": 510
             },
             "size": {
               "width": 180,
@@ -364,6 +364,11 @@
             "attrs": {
               "text": {
                 "text": "Resolutor N2 Interno (Vivaro Operaciones)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -808,19 +813,12 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "Alto"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
             "position": {
-              "x": 520,
-              "y": 520
+              "x": 560,
+              "y": 640
             },
             "size": {
               "width": 200,
@@ -829,6 +827,14 @@
             "attrs": {
               "text": {
                 "text": "BD de Tickets y Registro de Solución"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -1124,14 +1130,7 @@
               ]
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "4. Asignación y reporte de solución (N2 externo)"
-                  }
-                },
-                "position": 0.5
-              }
+              "4. Asignación y reporte de solución (N2 externo)"
             ],
             "id": "c376fdc3-5147-4054-bd97-3a158d658951",
             "source": {
@@ -1176,14 +1175,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "5. Asignación y reporte de solución (N2 interno)"
-                  }
-                },
-                "position": 0.5
-              }
+              "5. Asignación y reporte de solución (N2 interno)"
             ],
             "id": "7771a854-1600-4ef9-934b-5da78bc3c0bf",
             "source": {
@@ -1192,7 +1184,12 @@
             "target": {
               "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 890,
+                "y": 390
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1230,14 +1227,7 @@
               ]
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "6. Acceso administrativo remoto (externo)"
-                  }
-                },
-                "position": 0.5
-              }
+              "6. Acceso administrativo remoto (externo)"
             ],
             "id": "cf0df4a4-9a9d-4690-a469-6b0c58bade76",
             "source": {
@@ -1246,7 +1236,16 @@
             "target": {
               "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 1310,
+                "y": 60
+              },
+              {
+                "x": 1480,
+                "y": 180
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1298,7 +1297,12 @@
             "target": {
               "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 1440,
+                "y": 590
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1487,23 +1491,16 @@
               "containedElements": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Frontera Tercero N1 (Sonda)"
-                  }
-                },
-                "position": 0.5
-              }
+              "Frontera Tercero N1 (Sonda)"
             ],
             "id": "74d084cd-23ce-44c1-9c79-f0e8f67a9c63",
             "source": {
               "x": 460,
-              "y": 210
+              "y": 170
             },
             "target": {
               "x": 780,
-              "y": 210
+              "y": 170
             },
             "vertices": []
           },
@@ -1539,32 +1536,33 @@
               ]
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Frontera Tercero N2"
-                  }
-                },
-                "position": 0.5
-              }
+              "Frontera Tercero N2"
             ],
             "id": "80315ee5-af8f-4201-a1fd-7ddbbeb26615",
             "source": {
-              "x": 790,
-              "y": 100
+              "x": 810,
+              "y": -80
             },
             "target": {
-              "x": 1090,
-              "y": 100
+              "x": 1110,
+              "y": -80
             },
             "vertices": [
               {
-                "x": 790,
-                "y": 300
+                "x": 810,
+                "y": 120
               },
               {
-                "x": 1090,
-                "y": 300
+                "x": 880,
+                "y": 160
+              },
+              {
+                "x": 1040,
+                "y": 160
+              },
+              {
+                "x": 1110,
+                "y": 120
               }
             ]
           },
@@ -1606,14 +1604,53 @@
             ],
             "id": "3378ab7e-eb26-4dbe-b4ed-63392415d749",
             "source": {
-              "x": 1170,
-              "y": 120
+              "x": 1300,
+              "y": 30
             },
             "target": {
-              "x": 1170,
-              "y": 600
+              "x": 1450,
+              "y": 670
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 1160,
+                "y": 170
+              },
+              {
+                "x": 1160,
+                "y": 560
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ],
         "description": "Recepción, validación, asignación, resolución y cierre de requerimientos de clientes de EDR y Firewall Administrado, con terceros N1 y N2 y fronteras de confianza."
