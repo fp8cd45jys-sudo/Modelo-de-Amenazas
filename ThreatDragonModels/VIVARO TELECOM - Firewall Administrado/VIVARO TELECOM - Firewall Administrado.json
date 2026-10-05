@@ -35,8 +35,90 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe",
             "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "d752920e-2ff2-4023-b103-112ca5c3241c"
+                },
+                {
+                  "group": "right",
+                  "id": "255ae6d7-1803-4251-a8fa-612bc1d7db88"
+                },
+                {
+                  "group": "bottom",
+                  "id": "769e8080-c061-4884-8ab1-c9aa10310b97"
+                },
+                {
+                  "group": "left",
+                  "id": "a6beb831-ea0b-4e47-9680-97922ac6764c"
+                }
+              ]
+            },
+            "id": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe",
             "data": {
               "type": "tm.Actor",
               "name": "Cliente",
@@ -64,8 +146,90 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "7b90a31f-dc6b-4715-95ee-db5b345e5e40",
             "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "77f220a3-ec94-4c82-9b59-b7dd64e0a2ff"
+                },
+                {
+                  "group": "right",
+                  "id": "4d2c1650-cd16-4810-9bf3-0dd65061778d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f567f399-32bd-46a2-ab9c-dbd2f7e286be"
+                },
+                {
+                  "group": "left",
+                  "id": "a5ab6f18-110d-4ef2-8efb-7ed7470169d6"
+                }
+              ]
+            },
+            "id": "7b90a31f-dc6b-4715-95ee-db5b345e5e40",
             "data": {
               "type": "tm.Actor",
               "name": "Mesa de Servicio N1 (Sonda)",
@@ -93,8 +257,90 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e",
             "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f2b9f841-d9e3-4a08-a8c6-c281e20e2808"
+                },
+                {
+                  "group": "right",
+                  "id": "29a540f1-70e8-4b22-94fe-251ef1ab6e83"
+                },
+                {
+                  "group": "bottom",
+                  "id": "57b8521e-e388-43d6-a179-82660245c374"
+                },
+                {
+                  "group": "left",
+                  "id": "40441de5-2b9e-433e-9d38-5189ef1ed1c4"
+                }
+              ]
+            },
+            "id": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e",
             "data": {
               "type": "tm.Actor",
               "name": "Resolutor N2 Externo (Quanti / Hillpint)",
@@ -122,8 +368,90 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "e3a56f7f-b903-4324-80a4-88e04ad56463",
             "zIndex": 4,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f0ae06c6-05a5-4c26-ab9a-90f85a430afa"
+                },
+                {
+                  "group": "right",
+                  "id": "07ef3f51-fced-41af-9658-ab721fe4293c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "9164b78f-15aa-4223-bcb9-31a6035b4360"
+                },
+                {
+                  "group": "left",
+                  "id": "4ad64773-b77e-435c-a3f6-3b18562d9b11"
+                }
+              ]
+            },
+            "id": "e3a56f7f-b903-4324-80a4-88e04ad56463",
             "data": {
               "type": "tm.Actor",
               "name": "Resolutor N2 Interno (Vivaro Operaciones)",
@@ -151,8 +479,90 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "adc53811-2418-40db-a275-1891b1aa4bc3",
             "zIndex": 5,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a2bd3a64-1b8c-450b-9652-1fc7fb2e0ced"
+                },
+                {
+                  "group": "right",
+                  "id": "5c76c26e-56d5-4f2b-9786-ad66e43041fe"
+                },
+                {
+                  "group": "bottom",
+                  "id": "b8c6697f-551b-45ca-ae88-cd706fd9c336"
+                },
+                {
+                  "group": "left",
+                  "id": "0a0a826b-7e0c-49bd-a846-f39ddd3b0510"
+                }
+              ]
+            },
+            "id": "adc53811-2418-40db-a275-1891b1aa4bc3",
             "data": {
               "type": "tm.Process",
               "name": "Recepción multicanal",
@@ -183,8 +593,90 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "20067b05-e36a-47ac-89fe-ad837f55427c",
             "zIndex": 6,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a430a3f3-55d1-4b40-be5c-04d21daea6c0"
+                },
+                {
+                  "group": "right",
+                  "id": "046ebcc9-924d-4943-b9fa-01a1aab0a092"
+                },
+                {
+                  "group": "bottom",
+                  "id": "e4b53803-52ce-43c6-82bb-9e2420c0b4b2"
+                },
+                {
+                  "group": "left",
+                  "id": "3cfb56b7-95bd-48b1-95d4-e41c1d95c88b"
+                }
+              ]
+            },
+            "id": "20067b05-e36a-47ac-89fe-ad837f55427c",
             "data": {
               "type": "tm.Process",
               "name": "Sistema de Tickets",
@@ -201,8 +693,8 @@
           },
           {
             "position": {
-              "x": 1240,
-              "y": 280
+              "x": 1480,
+              "y": 290
             },
             "size": {
               "width": 130,
@@ -211,12 +703,99 @@
             "attrs": {
               "text": {
                 "text": "Firewall / EDR del cliente"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
-            "id": "6f12d61d-bcf0-4a18-89c7-5905700a44e5",
             "zIndex": 7,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "0d10b1c4-1bbe-4bbb-8594-05e1e876bde5"
+                },
+                {
+                  "group": "right",
+                  "id": "af3665e0-f3e3-4ad7-a602-633d1157097e"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f7daec1f-7511-498c-8caf-15dce1565939"
+                },
+                {
+                  "group": "left",
+                  "id": "97251e8a-b6c9-4971-976c-1e271e842f17"
+                }
+              ]
+            },
+            "id": "6f12d61d-bcf0-4a18-89c7-5905700a44e5",
             "data": {
               "type": "tm.Process",
               "name": "Firewall / EDR del cliente",
@@ -229,6 +808,13 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "Alto"
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -247,8 +833,90 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "9e98761c-4348-49b1-87cf-75bf83e4ba7f",
             "zIndex": 8,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "53c1c858-a439-4d9a-94c7-944dfe829b7f"
+                },
+                {
+                  "group": "right",
+                  "id": "38c3b941-bb8d-4865-8478-2ea19164565f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f456e62c-2533-4ed9-a06d-47711f06bd1a"
+                },
+                {
+                  "group": "left",
+                  "id": "4a32be56-52ce-4e32-b30c-59690a73d84a"
+                }
+              ]
+            },
+            "id": "9e98761c-4348-49b1-87cf-75bf83e4ba7f",
             "data": {
               "type": "tm.Store",
               "name": "BD de Tickets y Registro de Solución",
@@ -269,7 +937,6 @@
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -283,44 +950,45 @@
             "height": 100,
             "zIndex": 19,
             "connector": "smooth",
-            "id": "a4378982-b7c9-418e-8ff6-0541172bb917",
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Solicitud de requerimiento",
+              "description": "El cliente solicita un requerimiento por teléfono, correo o plataforma.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "Teléfono / Correo / Portal",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "1. Solicitud de requerimiento"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "a4378982-b7c9-418e-8ff6-0541172bb917",
             "source": {
               "cell": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe"
             },
             "target": {
               "cell": "adc53811-2418-40db-a275-1891b1aa4bc3"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "1. Solicitud de requerimiento",
-              "description": "El cliente solicita un requerimiento por teléfono, correo o plataforma.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "Teléfono / Correo / Portal",
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "isBidirectional": false,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -334,44 +1002,45 @@
             "height": 100,
             "zIndex": 20,
             "connector": "smooth",
-            "id": "f39323c2-2fda-4d7d-9abb-ec1695cbb1d5",
+            "data": {
+              "type": "tm.Flow",
+              "name": "2. Registro de folio",
+              "description": "La solicitud se registra y se genera folio de seguimiento (6.2.2.1).",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "2. Registro de folio"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "f39323c2-2fda-4d7d-9abb-ec1695cbb1d5",
             "source": {
               "cell": "adc53811-2418-40db-a275-1891b1aa4bc3"
             },
             "target": {
               "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "2. Registro de folio",
-              "description": "La solicitud se registra y se genera folio de seguimiento (6.2.2.1).",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "HTTPS",
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "isBidirectional": false,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -385,44 +1054,45 @@
             "height": 100,
             "zIndex": 21,
             "connector": "smooth",
-            "id": "a834346a-75b8-4980-8acd-782b810a0f06",
+            "data": {
+              "type": "tm.Flow",
+              "name": "3. Validación, clasificación y cierre",
+              "description": "Sonda valida póliza, clasifica, documenta y cierra (6.2.2.2, 6.2.2.3, 6.2.2.6, 6.2.2.7).",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "3. Validación, clasificación y cierre"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "a834346a-75b8-4980-8acd-782b810a0f06",
             "source": {
               "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
             },
             "target": {
               "cell": "7b90a31f-dc6b-4715-95ee-db5b345e5e40"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "3. Validación, clasificación y cierre",
-              "description": "Sonda valida póliza, clasifica, documenta y cierra (6.2.2.2, 6.2.2.3, 6.2.2.6, 6.2.2.7).",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "HTTPS",
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "isBidirectional": true,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -436,44 +1106,47 @@
             "height": 100,
             "zIndex": 22,
             "connector": "smooth",
-            "id": "c376fdc3-5147-4054-bd97-3a158d658951",
+            "data": {
+              "type": "tm.Flow",
+              "name": "4. Asignación y reporte de solución (N2 externo)",
+              "description": "Asignación al proveedor externo y reporte de la solución aplicada (6.2.2.4, 6.2.2.5). Canal según proveedor.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "Correo / Portal",
+              "threats": [],
+              "trustBoundaryIds": [
+                "80315ee5-af8f-4201-a1fd-7ddbbeb26615"
+              ]
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "4. Asignación y reporte de solución (N2 externo)"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "c376fdc3-5147-4054-bd97-3a158d658951",
             "source": {
               "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
             },
             "target": {
               "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "4. Asignación y reporte de solución (N2 externo)",
-              "description": "Asignación al proveedor externo y reporte de la solución aplicada (6.2.2.4, 6.2.2.5). Canal según proveedor.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "Correo / Portal",
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "isBidirectional": true,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -487,44 +1160,45 @@
             "height": 100,
             "zIndex": 23,
             "connector": "smooth",
-            "id": "7771a854-1600-4ef9-934b-5da78bc3c0bf",
+            "data": {
+              "type": "tm.Flow",
+              "name": "5. Asignación y reporte de solución (N2 interno)",
+              "description": "Asignación al equipo interno y reporte de la solución aplicada (6.2.2.4, 6.2.2.5).",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "5. Asignación y reporte de solución (N2 interno)"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "7771a854-1600-4ef9-934b-5da78bc3c0bf",
             "source": {
               "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
             },
             "target": {
               "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "5. Asignación y reporte de solución (N2 interno)",
-              "description": "Asignación al equipo interno y reporte de la solución aplicada (6.2.2.4, 6.2.2.5).",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "HTTPS",
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "isBidirectional": true,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -538,44 +1212,47 @@
             "height": 100,
             "zIndex": 24,
             "connector": "smooth",
-            "id": "cf0df4a4-9a9d-4690-a469-6b0c58bade76",
+            "data": {
+              "type": "tm.Flow",
+              "name": "6. Acceso administrativo remoto (externo)",
+              "description": "El proveedor externo aplica cambios en el firewall/EDR del cliente.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS / SSH / VPN",
+              "threats": [],
+              "trustBoundaryIds": [
+                "80315ee5-af8f-4201-a1fd-7ddbbeb26615"
+              ]
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "6. Acceso administrativo remoto (externo)"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "cf0df4a4-9a9d-4690-a469-6b0c58bade76",
             "source": {
               "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
             },
             "target": {
               "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "6. Acceso administrativo remoto (externo)",
-              "description": "El proveedor externo aplica cambios en el firewall/EDR del cliente.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "HTTPS / SSH / VPN",
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "isBidirectional": false,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -589,44 +1266,45 @@
             "height": 100,
             "zIndex": 25,
             "connector": "smooth",
-            "id": "b3973750-d02f-49d3-9250-caa70796e11b",
+            "data": {
+              "type": "tm.Flow",
+              "name": "7. Acceso administrativo remoto (interno)",
+              "description": "Vivaro Operaciones aplica cambios en el firewall/EDR del cliente.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS / SSH / VPN",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "7. Acceso administrativo remoto (interno)"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "b3973750-d02f-49d3-9250-caa70796e11b",
             "source": {
               "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
             },
             "target": {
               "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "7. Acceso administrativo remoto (interno)",
-              "description": "Vivaro Operaciones aplica cambios en el firewall/EDR del cliente.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "HTTPS / SSH / VPN",
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "isBidirectional": false,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -640,44 +1318,45 @@
             "height": 100,
             "zIndex": 26,
             "connector": "smooth",
-            "id": "42802b89-9977-4f9f-9ac4-8f82325113b4",
+            "data": {
+              "type": "tm.Flow",
+              "name": "8. Lectura/escritura de tickets",
+              "description": "El sistema de tickets almacena y consulta requerimientos y soluciones.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "SQL / interno",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "8. Lectura/escritura de tickets"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "42802b89-9977-4f9f-9ac4-8f82325113b4",
             "source": {
               "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
             },
             "target": {
               "cell": "9e98761c-4348-49b1-87cf-75bf83e4ba7f"
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Flow",
-              "name": "8. Lectura/escritura de tickets",
-              "description": "El sistema de tickets almacena y consulta requerimientos y soluciones.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "SQL / interno",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "isBidirectional": true,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -691,17 +1370,32 @@
             "height": 100,
             "zIndex": 27,
             "connector": "smooth",
-            "id": "0c2e82d8-7a9b-45b6-b6ac-01bc6578c375",
+            "data": {
+              "type": "tm.Flow",
+              "name": "9. Notificación de cierre",
+              "description": "Se notifica al cliente el cierre del requerimiento (6.2.2.7).",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "Correo (SMTP)",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "9. Notificación de cierre"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "0c2e82d8-7a9b-45b6-b6ac-01bc6578c375",
             "source": {
               "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
             },
@@ -717,28 +1411,13 @@
                 "x": 140,
                 "y": 460
               }
-            ],
-            "data": {
-              "type": "tm.Flow",
-              "name": "9. Notificación de cierre",
-              "description": "Se notifica al cliente el cierre del requerimiento (6.2.2.7).",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "Correo (SMTP)",
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "isBidirectional": false,
-              "hasOpenThreats": false,
-              "threats": []
-            }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 3,
-                "strokeDasharray": "10 5",
                 "targetMarker": {
                   "name": ""
                 },
@@ -751,17 +1430,26 @@
             "height": 100,
             "zIndex": 38,
             "connector": "smooth",
-            "id": "e3beb058-6991-489f-b88b-fc7021a8a77a",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Cliente – Vivaro",
+              "description": "La identidad de quien solicita no está garantizada.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "Frontera Cliente – Vivaro"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "e3beb058-6991-489f-b88b-fc7021a8a77a",
             "source": {
               "x": 270,
               "y": 170
@@ -770,22 +1458,13 @@
               "x": 270,
               "y": 530
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Frontera Cliente – Vivaro",
-              "description": "La identidad de quien solicita no está garantizada.",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 3,
-                "strokeDasharray": "10 5",
                 "targetMarker": {
                   "name": ""
                 },
@@ -798,17 +1477,26 @@
             "height": 100,
             "zIndex": 39,
             "connector": "smooth",
-            "id": "74d084cd-23ce-44c1-9c79-f0e8f67a9c63",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Tercero N1 (Sonda)",
+              "description": "Tercero con acceso a datos de todos los clientes.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "Frontera Tercero N1 (Sonda)"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "74d084cd-23ce-44c1-9c79-f0e8f67a9c63",
             "source": {
               "x": 460,
               "y": 210
@@ -817,22 +1505,13 @@
               "x": 780,
               "y": 210
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Frontera Tercero N1 (Sonda)",
-              "description": "Tercero con acceso a datos de todos los clientes.",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 3,
-                "strokeDasharray": "10 5",
                 "targetMarker": {
                   "name": ""
                 },
@@ -845,17 +1524,31 @@
             "height": 100,
             "zIndex": 40,
             "connector": "smooth",
-            "id": "80315ee5-af8f-4201-a1fd-7ddbbeb26615",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Tercero N2",
+              "description": "Tercero con acceso administrativo a la infraestructura de clientes.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "c376fdc3-5147-4054-bd97-3a158d658951",
+                "cf0df4a4-9a9d-4690-a469-6b0c58bade76"
+              ],
+              "containedElements": [
+                "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
+              ]
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "Frontera Tercero N2"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "80315ee5-af8f-4201-a1fd-7ddbbeb26615",
             "source": {
               "x": 790,
               "y": 100
@@ -873,22 +1566,13 @@
                 "x": 1090,
                 "y": 300
               }
-            ],
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Frontera Tercero N2",
-              "description": "Tercero con acceso administrativo a la infraestructura de clientes.",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 3,
-                "strokeDasharray": "10 5",
                 "targetMarker": {
                   "name": ""
                 },
@@ -901,17 +1585,26 @@
             "height": 100,
             "zIndex": 41,
             "connector": "smooth",
-            "id": "3378ab7e-eb26-4dbe-b4ed-63392415d749",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Infraestructura del cliente",
+              "description": "Activo final que se busca proteger.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
             "labels": [
               {
-                "position": 0.5,
                 "attrs": {
                   "label": {
                     "text": "Frontera Infraestructura del cliente"
                   }
-                }
+                },
+                "position": 0.5
               }
             ],
+            "id": "3378ab7e-eb26-4dbe-b4ed-63392415d749",
             "source": {
               "x": 1170,
               "y": 120
@@ -920,14 +1613,7 @@
               "x": 1170,
               "y": 600
             },
-            "vertices": [],
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Frontera Infraestructura del cliente",
-              "description": "Activo final que se busca proteger.",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
+            "vertices": []
           }
         ],
         "description": "Recepción, validación, asignación, resolución y cierre de requerimientos de clientes de EDR y Firewall Administrado, con terceros N1 y N2 y fronteras de confianza."
