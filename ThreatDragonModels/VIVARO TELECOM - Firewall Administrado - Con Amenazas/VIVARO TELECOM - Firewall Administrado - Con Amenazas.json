@@ -1,18 +1,1410 @@
 {
   "version": "2.6.2",
-  "release_version": "",
-  "released_at": "",
+  "release_version": "1.0",
+  "released_at": "2026-09-29",
   "summary": {
     "title": "VIVARO TELECOM - Firewall Administrado - Con Amenazas",
-    "owner": "",
-    "description": "",
+    "owner": "Alberto Jorge Gonzalez Reyes",
+    "description": "Servicio de Firewall Administrado provisto por VIVARO TELECOM a clientes empresariales. Incluye la administración remota de los firewalls perimetrales ubicados en las instalaciones del cliente, la gestión de cambios de reglas y políticas a solicitud del cliente a través de la mesa de servicio, el monitoreo continuo, la recolección de logs hacia la plataforma de correlación (SIEM), la gestión de respaldos de configuración y la actualización de firmware. Queda fuera del alcance la infraestructura interna del cliente detrás del firewall y los enlaces del proveedor de Internet.",
     "id": 0
   },
   "detail": {
     "contributors": [],
-    "diagrams": [],
-    "diagramTop": 0,
-    "reviewer": "",
-    "threatTop": 0
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD 1 – Proceso de Requerimientos (PRO-COP-OPE 6.2.2) – Con Amenazas",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [
+          {
+            "position": {
+              "x": 50,
+              "y": 300
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Cliente"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Cliente",
+              "description": "Usuario del cliente con póliza activa de EDR o Firewall Administrado que genera requerimientos por teléfono, correo o plataforma.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "657c483c-387f-4000-bff5-e53085533447",
+                  "title": "Suplantación del contacto del cliente para solicitar cambios de seguridad",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un tercero se hace pasar por personal del cliente (por teléfono o correo) y solicita abrir reglas, crear accesos VPN, deshabilitar políticas o agregar exclusiones en el EDR. La actividad 6.2.2.2 valida que la empresa tenga póliza activa, pero no verifica la identidad ni la autorización de la persona que solicita.",
+                  "mitigation": "Mantener una matriz de contactos autorizados por cliente con su nivel de autorización. Verificar identidad antes de registrar cambios de seguridad (devolución de llamada al número registrado, PIN o token). Confirmar por un segundo canal los cambios críticos. Incorporar este paso en la actividad 6.2.2.2. Ref. ISO/IEC 27001:2022 A.5.15, A.5.16, A.5.17, A.8.5.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "d3b5ae54-320a-4178-a755-a4e69b9d594d",
+                  "title": "El cliente niega haber solicitado un cambio",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Ante una afectación posterior, el cliente puede negar haber pedido el cambio y no existe evidencia suficiente de la solicitud ni de su aprobación.",
+                  "mitigation": "Conservar evidencia de cada solicitud (grabación de llamada, correo original o registro en plataforma). Requerir aprobación explícita del contacto autorizado antes de ejecutar. Definir periodo de retención. Ref. A.5.33, A.8.15.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 530,
+              "y": 60
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Mesa de Servicio N1 (Sonda)"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "7b90a31f-dc6b-4715-95ee-db5b345e5e40",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Mesa de Servicio N1 (Sonda)",
+              "description": "Proveedor tercerizado que valida cliente y alcance, clasifica, da seguimiento, documenta y cierra requerimientos (6.2.2.2, 6.2.2.3, 6.2.2.6, 6.2.2.7).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "9a6a83e6-6610-4108-8726-753390842f16",
+                  "title": "Accesos vigentes de personal de Sonda dado de baja",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "La rotación de personal del proveedor sin notificación oportuna deja cuentas activas que pueden ser usadas por personas no autorizadas.",
+                  "mitigation": "Proceso de altas y bajas coordinado con el proveedor. Conciliación mensual de cuentas del proveedor. Cláusulas contractuales de notificación. Ref. A.5.18, A.5.19, A.5.20.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "53a6ec0d-38d1-4b61-a8e3-327c887331ae",
+                  "title": "Falta de evidencia del desempeño y acciones del proveedor",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "No existen evidencias suficientes para demostrar las acciones de Sonda ni el cumplimiento de sus niveles de servicio.",
+                  "mitigation": "Registros atribuibles en el sistema de tickets. Reportes periódicos de desempeño. Derecho de auditoría en el contrato. Ref. A.5.22, A.8.15.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 840,
+              "y": 140
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Resolutor N2 Externo (Quanti / Hillpint)"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Resolutor N2 Externo (Quanti / Hillpint)",
+              "description": "Proveedores externos que ejecutan la resolución técnica con acceso administrativo a la infraestructura del cliente (6.2.2.5).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "8f8fd04f-4d9b-45b5-a12f-fbee28e26054",
+                  "title": "Uso de credenciales robadas del proveedor (cadena de suministro)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un atacante compromete al proveedor externo y usa sus credenciales para acceder a la infraestructura de múltiples clientes.",
+                  "mitigation": "MFA obligatorio. Cuentas nominales. Acceso temporal ligado a un ticket aprobado. Acceso solo mediante VPN dedicada o servidor de salto. Grabación de sesiones. Ref. A.5.19, A.5.21, A.8.2, A.8.5.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "1ffee910-c518-43ff-bf26-265ed304091a",
+                  "title": "Cambios en el firewall sin trazabilidad al ticket",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "El proveedor realiza cambios en la infraestructura del cliente que no pueden relacionarse con un requerimiento autorizado.",
+                  "mitigation": "Requerir el número de ticket en cada cambio. Envío de bitácoras de administración al SIEM. Conciliación periódica de cambios contra tickets. Ref. A.8.15, A.8.32.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 840,
+              "y": 420
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Resolutor N2 Interno (Vivaro Operaciones)"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "e3a56f7f-b903-4324-80a4-88e04ad56463",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Resolutor N2 Interno (Vivaro Operaciones)",
+              "description": "Equipo interno de Vivaro que ejecuta la resolución técnica de los requerimientos asignados (6.2.2.5).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0fd20938-c4f8-485d-ac72-5f16a0b3caed",
+                  "title": "Cuentas administrativas compartidas en firewalls y consolas",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "El equipo interno usa cuentas genéricas (por ejemplo, admin) en los equipos de los clientes, lo que impide atribuir acciones y facilita el uso indebido.",
+                  "mitigation": "Cuentas nominales. Solución de gestión de accesos privilegiados. MFA. Rotación de credenciales. Ref. A.5.16, A.8.2, A.8.5.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 320,
+              "y": 280
+            },
+            "size": {
+              "width": 120,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Recepción multicanal"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "adc53811-2418-40db-a275-1891b1aa4bc3",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Process",
+              "name": "Recepción multicanal",
+              "description": "Recepción de requerimientos por llamada telefónica, correo electrónico o plataforma de solicitudes.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "98752621-ea2b-4e9e-83d0-64fb78b55712",
+                  "title": "Correo de solicitud con remitente falsificado",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un atacante envía correos que aparentan provenir de un dominio del cliente (suplantación de correo o phishing) para solicitar cambios en el firewall o EDR.",
+                  "mitigation": "Validar autenticación de correo entrante (SPF, DKIM y DMARC). No ejecutar cambios de seguridad solicitados solo por correo sin verificación de identidad. Priorizar la plataforma autenticada como canal para cambios. Ref. A.5.14, A.8.5, A.8.7.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "899d95ca-2551-4cd7-beb5-9cb4632aa569",
+                  "title": "Registro incorrecto o alterado de la solicitud",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Al capturar el requerimiento (6.2.2.1) se registra información distinta a la solicitada, por error o con intención, y se ejecuta un cambio diferente al pedido.",
+                  "mitigation": "Usar una plantilla estructurada para solicitudes de cambio. Confirmar con el cliente el resumen del requerimiento antes de asignarlo. Adjuntar la evidencia original al ticket. Ref. A.8.32, A.5.33.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "ba8f92b6-c3b4-448b-b9a6-8af4c4713a9e",
+                  "title": "Saturación de los canales de recepción",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "Un volumen anormal de llamadas, correos o solicitudes (accidental o malicioso) impide atender requerimientos legítimos dentro de los niveles de servicio.",
+                  "mitigation": "Filtros antispam y límites de envío en la plataforma. Plan de capacidad de la mesa de servicio. Criterios de priorización. Ref. A.8.6.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "Bajo"
+            }
+          },
+          {
+            "position": {
+              "x": 560,
+              "y": 280
+            },
+            "size": {
+              "width": 120,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Sistema de Tickets"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "20067b05-e36a-47ac-89fe-ad837f55427c",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Process",
+              "name": "Sistema de Tickets",
+              "description": "Registro de folios, validación, clasificación, asignación, seguimiento y cierre de requerimientos (6.2.2.1 a 6.2.2.7). Requiere inicio de sesión de usuarios de Mesa de Ayuda, Sonda y resolutores N2.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "cac9eaab-acb2-4ce6-9b80-cd6d1599dab9",
+                  "title": "Cuentas compartidas o sin MFA en el sistema de tickets",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Operadores de Mesa de Ayuda, Sonda o resolutores N2 usan cuentas genéricas o sin autenticación multifactor, lo que permite suplantación o uso de credenciales robadas.",
+                  "mitigation": "Cuentas nominales para todos los usuarios. MFA obligatorio. Integración con inicio de sesión único (SSO) cuando sea posible. Bloqueo por intentos fallidos. Ref. A.5.16, A.5.17, A.8.5.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "67aa14d4-6e80-4f51-b205-8dfc7c786a72",
+                  "title": "Permisos excesivos y falta de segregación de funciones",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Usuarios con permisos para registrar, asignar, resolver y cerrar el mismo ticket, o con visibilidad de todos los clientes sin necesidad.",
+                  "mitigation": "Control de acceso basado en roles y por cliente. Mínimo privilegio. Segregación entre quien registra, quien aprueba, quien ejecuta y quien cierra. Revisión periódica de accesos. Ref. A.5.3, A.5.15, A.5.18, A.8.2, A.8.3.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "d6a4f8e5-694e-4134-b832-50bc38d95dd2",
+                  "title": "Modificación de tickets sin rastro",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Cambio de prioridad, de la solución registrada o cierre de tickets no resueltos sin que quede evidencia de quién lo hizo.",
+                  "mitigation": "Bitácora de auditoría de cambios en tickets. Campos críticos no editables después del cierre. Revisión de tickets reabiertos y reclasificados. Ref. A.8.15, A.5.33.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "11a91303-4bd3-4f57-be9c-3c6611058d04",
+                  "title": "Un operador niega haber ejecutado o cerrado un requerimiento",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Sin registros atribuibles a usuarios nominales no se puede demostrar quién realizó cada acción.",
+                  "mitigation": "Registros con usuario, fecha, hora e IP. Sincronización de reloj. Retención definida de bitácoras. Ref. A.8.15, A.8.17.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "9f033b08-47f9-42b0-913a-cd9b00f83f9e",
+                  "title": "Exposición de datos de múltiples clientes",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Vulnerabilidades de la aplicación web o falta de segregación por cliente permiten consultar información de otros clientes (contactos, IPs, configuraciones).",
+                  "mitigation": "Gestión de vulnerabilidades y parches. Configuración segura. Pruebas de seguridad periódicas. Segregación de información por cliente. Ref. A.8.3, A.8.8, A.8.9, A.8.29.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                },
+                {
+                  "id": "ecf1b38a-4fad-4f53-9ae9-b2d99272c183",
+                  "title": "Incidente de seguridad clasificado como requerimiento",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "En la actividad 6.2.2.3, un incidente de seguridad se clasifica por error como requerimiento y se atiende con prioridad y tiempos de requerimiento, retrasando la contención.",
+                  "mitigation": "Criterios de clasificación documentados con ejemplos. Regla de escalamiento ante duda. Revisión de casos reclasificados. Capacitación al personal de Sonda. Ref. A.5.24, A.5.25, A.6.3.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "80cc97bb-5f6f-44ee-bda4-271f45e7bc9c",
+                  "title": "Indisponibilidad del sistema de tickets",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Una caída del sistema impide registrar, asignar y dar seguimiento a requerimientos, afectando los niveles de servicio.",
+                  "mitigation": "Alta disponibilidad o redundancia. Respaldos probados. Procedimiento manual de contingencia. Ref. A.5.30, A.8.13, A.8.14.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "Medio"
+            }
+          },
+          {
+            "position": {
+              "x": 1240,
+              "y": 280
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Firewall / EDR del cliente"
+              },
+              "body": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "6f12d61d-bcf0-4a18-89c7-5905700a44e5",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Process",
+              "name": "Firewall / EDR del cliente",
+              "description": "Infraestructura de seguridad del cliente donde se aplica la resolución técnica (cambios de reglas, políticas y exclusiones).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "ec07615a-0a13-43a7-8777-7aded5f6f72d",
+                  "title": "Acceso administrativo permanente y excesivo",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Los resolutores N2 internos y externos mantienen acceso administrativo permanente a los equipos de todos los clientes, aunque no tengan un requerimiento activo.",
+                  "mitigation": "Mínimo privilegio. Accesos temporales por ticket. Gestión de accesos privilegiados. Revisión periódica de accesos. Ref. A.5.18, A.8.2.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "957a3287-4ebf-4c03-9f97-689ba800f074",
+                  "title": "Exclusiones o deshabilitación de políticas EDR sin análisis de riesgo",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Las solicitudes de exclusiones o desactivación de controles reducen la protección del cliente y se aplican sin evaluación de seguridad ni fecha de expiración.",
+                  "mitigation": "Justificación y aprobación de seguridad para exclusiones. Fecha de caducidad. Revisión periódica de exclusiones vigentes. Ref. A.8.7, A.8.32.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                },
+                {
+                  "id": "170419a1-cf3b-40c1-94cc-01250f29b8e9",
+                  "title": "Cambio erróneo que deja sin servicio al cliente",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Una regla mal aplicada bloquea tráfico legítimo o deshabilita la protección, afectando la operación del cliente.",
+                  "mitigation": "Ventanas de cambio. Respaldo previo de configuración. Plan de reversión. Validación y monitoreo posterior al cambio. Ref. A.8.13, A.8.16, A.8.32.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                }
+              ],
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "Alto"
+            }
+          },
+          {
+            "position": {
+              "x": 520,
+              "y": 520
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "BD de Tickets y Registro de Solución"
+              },
+              "topLine": {
+                "stroke": "red"
+              },
+              "bottomLine": {
+                "stroke": "red"
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "9e98761c-4348-49b1-87cf-75bf83e4ba7f",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Store",
+              "name": "BD de Tickets y Registro de Solución",
+              "description": "Repositorio de requerimientos, datos de contacto de clientes, clasificación, soluciones aplicadas y notificaciones de cierre.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "bf76d912-0303-43c6-8308-d0e13b4e5d8a",
+                  "title": "Credenciales o secretos registrados en tickets",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "En los tickets se anotan contraseñas, llaves VPN o accesos de los equipos, visibles para todos los usuarios del sistema.",
+                  "mitigation": "Prohibir el registro de credenciales en tickets. Uso de un gestor de secretos. Búsqueda y depuración periódica. Enmascaramiento de datos. Ref. A.5.17, A.5.12, A.8.11.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                },
+                {
+                  "id": "3c1d02dd-4f9e-43ad-b9ba-833163f3ad28",
+                  "title": "Base de datos sin cifrado en reposo",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "La información de clientes queda legible si se compromete el servidor o sus respaldos.",
+                  "mitigation": "Cifrado en reposo de la base de datos y de los respaldos. Gestión de llaves. Ref. A.8.24.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "e5a959a6-3d40-48f8-bb18-94bd386142b4",
+                  "title": "Alteración directa de registros en la base de datos",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Un usuario con acceso a la base de datos modifica registros sin pasar por la aplicación.",
+                  "mitigation": "Acceso a la base de datos restringido a cuentas de servicio y administradores autorizados. Bitácoras de base de datos. Ref. A.8.3, A.8.15.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                },
+                {
+                  "id": "5c67256a-f651-452e-85b3-c443f7a6e5f1",
+                  "title": "Pérdida o borrado de la bitácora de tickets",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "La eliminación o pérdida de registros elimina la evidencia de solicitudes, aprobaciones y soluciones.",
+                  "mitigation": "Política de retención. Respaldos. Protección de registros contra borrado. Ref. A.5.33, A.8.13, A.8.15.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                },
+                {
+                  "id": "7eac76c4-f003-487d-9a94-0deb15f60f7d",
+                  "title": "Pérdida de la base de datos",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Una falla o ataque (por ejemplo, ransomware) destruye la base de datos y no existen respaldos recuperables.",
+                  "mitigation": "Respaldos periódicos, aislados y con pruebas de restauración. Ref. A.8.13.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ],
+              "isALog": true,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 19,
+            "connector": "smooth",
+            "id": "a4378982-b7c9-418e-8ff6-0541172bb917",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "1. Solicitud de requerimiento"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe"
+            },
+            "target": {
+              "cell": "adc53811-2418-40db-a275-1891b1aa4bc3"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Solicitud de requerimiento",
+              "description": "El cliente solicita un requerimiento por teléfono, correo o plataforma.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "Teléfono / Correo / Portal",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "57b1551f-732e-4a86-85e1-30165a494802",
+                  "title": "Información sensible enviada por canales no cifrados",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Los clientes envían IPs, configuraciones o credenciales por teléfono o correo sin cifrar.",
+                  "mitigation": "Lineamientos de uso de canales. Prohibir el envío de credenciales. Forzar TLS en correo. Preferir la plataforma de solicitudes. Ref. A.5.14, A.5.12, A.8.24.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 20,
+            "connector": "smooth",
+            "id": "f39323c2-2fda-4d7d-9abb-ec1695cbb1d5",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "2. Registro de folio"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "adc53811-2418-40db-a275-1891b1aa4bc3"
+            },
+            "target": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "2. Registro de folio",
+              "description": "La solicitud se registra y se genera folio de seguimiento (6.2.2.1).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "isBidirectional": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 21,
+            "connector": "smooth",
+            "id": "a834346a-75b8-4980-8acd-782b810a0f06",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "3. Validación, clasificación y cierre"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "7b90a31f-dc6b-4715-95ee-db5b345e5e40"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "3. Validación, clasificación y cierre",
+              "description": "Sonda valida póliza, clasifica, documenta y cierra (6.2.2.2, 6.2.2.3, 6.2.2.6, 6.2.2.7).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "isBidirectional": true,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "18410dab-8350-428c-b141-a0cb1e65a520",
+                  "title": "Fuga de información de todos los clientes desde el tercero N1",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sonda tiene acceso a datos de todos los clientes; una fuga intencional o accidental desde su infraestructura expone a múltiples clientes.",
+                  "mitigation": "Acuerdos de confidencialidad. Requisitos de seguridad en contrato. Evaluación de riesgo del proveedor. Acceso mínimo. Acceso solo desde equipos controlados o VPN. Prevención de fuga de datos. Ref. A.5.19, A.5.20, A.5.21, A.6.6, A.8.12.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "id": "c376fdc3-5147-4054-bd97-3a158d658951",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "4. Asignación y reporte de solución (N2 externo)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "4. Asignación y reporte de solución (N2 externo)",
+              "description": "Asignación al proveedor externo y reporte de la solución aplicada (6.2.2.4, 6.2.2.5). Canal según proveedor.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "Correo / Portal",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "isBidirectional": true,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "77fcd1b5-94c0-4542-ae19-fb2df4741881",
+                  "title": "Asignaciones por correo con datos del cliente",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Las asignaciones al proveedor externo viajan por correo con información sensible sin cifrar o pueden enviarse al destinatario equivocado.",
+                  "mitigation": "Canal seguro (portal o integración). Cifrado. Minimizar datos enviados. Plantillas con destinatarios predefinidos. Ref. A.5.14, A.8.24.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
+                },
+                {
+                  "id": "edc7898e-5c59-440f-abf5-543c6cd13a8a",
+                  "title": "Asignación falsa enviada al proveedor",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Un atacante envía un correo que simula ser una asignación de Vivaro para que el proveedor ejecute un cambio no autorizado.",
+                  "mitigation": "DMARC en el dominio de Vivaro. El proveedor valida cada asignación contra el sistema de tickets antes de ejecutar. Ref. A.5.14, A.8.32.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 23,
+            "connector": "smooth",
+            "id": "7771a854-1600-4ef9-934b-5da78bc3c0bf",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "5. Asignación y reporte de solución (N2 interno)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "5. Asignación y reporte de solución (N2 interno)",
+              "description": "Asignación al equipo interno y reporte de la solución aplicada (6.2.2.4, 6.2.2.5).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "isBidirectional": true,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 24,
+            "connector": "smooth",
+            "id": "cf0df4a4-9a9d-4690-a469-6b0c58bade76",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "6. Acceso administrativo remoto (externo)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "69cae6f8-2d31-4fc3-97c4-dee4e7358a6e"
+            },
+            "target": {
+              "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "6. Acceso administrativo remoto (externo)",
+              "description": "El proveedor externo aplica cambios en el firewall/EDR del cliente.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS / SSH / VPN",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "d8d517d3-9cc3-4b42-b7dc-950cc2f10de8",
+                  "title": "Cambio no autorizado o distinto al solicitado",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "El proveedor externo aplica en el firewall o EDR un cambio diferente al aprobado, por error o con intención.",
+                  "mitigation": "Gestión de cambios con aprobación. Revisión por pares. Respaldo previo. Comparación de configuraciones antes y después. Ref. A.8.9, A.8.13, A.8.32.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
+                },
+                {
+                  "id": "355effc1-7957-4292-817f-cf246a1e1b2d",
+                  "title": "Interfaz de administración expuesta a Internet",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "La administración remota se realiza por red pública con interfaces publicadas o protocolos inseguros.",
+                  "mitigation": "Administración solo mediante VPN o servidor de salto con IPs restringidas. Cifrado fuerte. Deshabilitar protocolos inseguros. Ref. A.8.20, A.8.21, A.8.24.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 25,
+            "connector": "smooth",
+            "id": "b3973750-d02f-49d3-9250-caa70796e11b",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "7. Acceso administrativo remoto (interno)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "e3a56f7f-b903-4324-80a4-88e04ad56463"
+            },
+            "target": {
+              "cell": "6f12d61d-bcf0-4a18-89c7-5905700a44e5"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "7. Acceso administrativo remoto (interno)",
+              "description": "Vivaro Operaciones aplica cambios en el firewall/EDR del cliente.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS / SSH / VPN",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "753a6679-fc9b-431a-b14e-8be91269e3b0",
+                  "title": "Cambio no autorizado o distinto al solicitado (interno)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "El equipo interno aplica en el firewall o EDR un cambio diferente al aprobado.",
+                  "mitigation": "Gestión de cambios con aprobación. Revisión por pares. Respaldo previo y plan de reversión. Ref. A.8.9, A.8.13, A.8.32.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 26,
+            "connector": "smooth",
+            "id": "42802b89-9977-4f9f-9ac4-8f82325113b4",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "8. Lectura/escritura de tickets"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "9e98761c-4348-49b1-87cf-75bf83e4ba7f"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "8. Lectura/escritura de tickets",
+              "description": "El sistema de tickets almacena y consulta requerimientos y soluciones.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "SQL / interno",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "isBidirectional": true,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 27,
+            "connector": "smooth",
+            "id": "0c2e82d8-7a9b-45b6-b6ac-01bc6578c375",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "9. Notificación de cierre"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "20067b05-e36a-47ac-89fe-ad837f55427c"
+            },
+            "target": {
+              "cell": "b6f9a9dc-7cdb-4536-9da0-fa80595cfbbe"
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 460
+              },
+              {
+                "x": 140,
+                "y": 460
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "9. Notificación de cierre",
+              "description": "Se notifica al cliente el cierre del requerimiento (6.2.2.7).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "Correo (SMTP)",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "isBidirectional": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "3db721a5-bf07-4497-8702-719026478be4",
+                  "title": "Notificación enviada a un contacto incorrecto",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "La notificación de cierre con detalles técnicos del cambio llega a una persona no autorizada del cliente o externa.",
+                  "mitigation": "Enviar solo a contactos autorizados registrados. Minimizar detalles técnicos en la notificación. DMARC en el dominio de Vivaro. Ref. A.5.14.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 38,
+            "connector": "smooth",
+            "id": "e3beb058-6991-489f-b88b-fc7021a8a77a",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Cliente – Vivaro"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 270,
+              "y": 170
+            },
+            "target": {
+              "x": 270,
+              "y": 530
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Cliente – Vivaro",
+              "description": "La identidad de quien solicita no está garantizada.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 39,
+            "connector": "smooth",
+            "id": "74d084cd-23ce-44c1-9c79-f0e8f67a9c63",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Tercero N1 (Sonda)"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 460,
+              "y": 210
+            },
+            "target": {
+              "x": 780,
+              "y": 210
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Tercero N1 (Sonda)",
+              "description": "Tercero con acceso a datos de todos los clientes.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 40,
+            "connector": "smooth",
+            "id": "80315ee5-af8f-4201-a1fd-7ddbbeb26615",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Tercero N2"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 790,
+              "y": 100
+            },
+            "target": {
+              "x": 1090,
+              "y": 100
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 300
+              },
+              {
+                "x": 1090,
+                "y": 300
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Tercero N2",
+              "description": "Tercero con acceso administrativo a la infraestructura de clientes.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 3,
+                "strokeDasharray": "10 5",
+                "targetMarker": {
+                  "name": ""
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 41,
+            "connector": "smooth",
+            "id": "3378ab7e-eb26-4dbe-b4ed-63392415d749",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Frontera Infraestructura del cliente"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 1170,
+              "y": 120
+            },
+            "target": {
+              "x": 1170,
+              "y": 600
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Infraestructura del cliente",
+              "description": "Activo final que se busca proteger.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          }
+        ],
+        "description": "Recepción, validación, asignación, resolución y cierre de requerimientos de clientes de EDR y Firewall Administrado, con terceros N1 y N2 y fronteras de confianza."
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Carlos Diaz",
+    "threatTop": 33
   }
 }
