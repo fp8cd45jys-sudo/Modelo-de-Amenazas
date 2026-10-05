@@ -1,0 +1,29 @@
+{
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "2026-09-29",
+  "summary": {
+    "title": "VIVARO TELECOM / Firewall Administrado",
+    "owner": "Alberto Jorge Gonzalez Reyes",
+    "description": "Servicio de Firewall Administrado provisto por VIVARO TELECOM a clientes empresariales. Incluye la administración remota de los firewalls perimetrales ubicados en las instalaciones del cliente,la gestión de cambios de reglas y políticas a solicitud del cliente a través de la mesa de servicio, el monitoreo continuo, la recolección de logs hacia la plataforma de correlación (SIEM), la gestión de respaldos de configuración y la actualización de firmware. Queda fuera del alcance la infraestructura interna del cliente detrás del firewall y los enlaces del proveedor de Internet.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD Nivel 0 – Firewall Administrado",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [],
+        "description": "Vista general de actores, flujos de administración, monitoreo y fronteras de confianza"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Carlos Diaz",
+    "threatTop": 0
+  }
+}
